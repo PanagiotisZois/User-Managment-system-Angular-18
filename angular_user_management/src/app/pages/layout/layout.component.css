@@ -1,0 +1,67 @@
+/* Basic styling for the navbar */
+.navbar {
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Adjustments for the navbar brand */
+  .navbar-brand {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #ffffff; /* White color for text */
+  }
+  
+  /* Style adjustments for the toggler button */
+  .navbar-toggler {
+    border: none;
+  }
+  
+  /* Customize the toggler icon */
+  .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDEyIDEyIj4KICA8cGF0aCBkPSJNMSwzIEwyLDMgTDEyLDMgTDIxLDMiIHN0cm9rZS13aWR0aD0iMiIgLz4KPC9zdmc+'); /* Example of a hamburger menu icon */
+  }
+  
+  /* Style adjustments for the nav links */
+  .nav-link {
+    color: #ffffff; /* White color for text */
+    font-size: 1rem;
+    margin: 0 0.5rem; /* Horizontal spacing between links */
+  }
+  
+  /* Active link styling */
+  .nav-link.active {
+    font-weight: bold;
+    color: #f0f0f0; /* Light grey color for active link */
+  }
+  
+  /* Adjustments for the form inside the navbar */
+  .form-control {
+    border: none;
+    border-radius: 0; /* Remove border radius for a more flat look */
+    box-shadow: none;
+  }
+  
+  .btn-primary {
+    background-color: #007bff; /* Bootstrap primary color */
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  /* Margin adjustments for nav items */
+  .nav-item {
+    margin-top: 0; /* Reset margin */
+  }
+  
+  /* Media query adjustments for responsiveness */
+  @media (max-width: 576px) {
+    .navbar-nav {
+      text-align: center;
+    }
+  
+    .form {
+      margin-top: 1rem;
+    }
+  }
+  

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Router } from 'express';
 
 
 @Component({
@@ -10,5 +11,11 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './layout.component.css'
 })
 export class LayoutComponent {
+  router = inject(Router);
+
+  onLogOff() {
+    localStorage.removeItem("userApp");
+    this.router.navigateByUrl('/login');
+  }
 
 }

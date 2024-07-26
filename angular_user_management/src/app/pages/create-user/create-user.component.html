@@ -1,1 +1,62 @@
-<p>create-user works!</p>
+<div class="row">
+    <div class="col-12">
+        <div class="container">
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label">Full name</label>
+                    <input type="text" [disabled]="loggedUserId != 0" [(ngModel)]="userObj.FullName" class="form-control" id="validationCustom01" required>
+                    <div class="valid-feedback">Looks good!</div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="validationCustomUsername" class="form-label">Email</label>
+                    <div class="input-group has-validation">
+                        <input type="email" [(ngModel)]="userObj.EmailId" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback">Please provide a valid email.</div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="validationCustom03" class="form-label">Mobile Number</label>
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">#64</span>
+                        <input type="text" [(ngModel)]="userObj.MobileNo" class="form-control" id="validationCustomMobile" required>
+                        <div class="invalid-feedback">Please provide a valid number.</div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="validationCustom04" class="form-label">City</label>
+                    <input type="text" [(ngModel)]="userObj.City" class="form-control" id="validationCustomCity" required>
+                    <div class="invalid-feedback">Please provide a valid city.</div>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="validationCustom05" class="form-label">Password</label>
+                    <input type="password" [(ngModel)]="userObj.Password" class="form-control" id="validationCustomPassword" required>
+                    <div class="invalid-feedback">Please provide a valid password.</div>
+                </div>
+
+                <div class="col-md-3">
+                    <label for="validationCustom06" class="form-label">Address Line 1</label>
+                    <textarea class="form-control" [(ngModel)]="userObj.AddressLine1" id="validationCustomAddress1" required></textarea>
+                    <div class="invalid-feedback">Please provide a valid address.</div>
+                </div>
+
+                <div class="col-md-3">
+                    <label for="validationCustom07" class="form-label">Address Line 2</label>
+                    <textarea class="form-control" [(ngModel)]="userObj.AddressLine2" id="validationCustomAddress2"></textarea>
+                </div>
+
+                <div class="col-6">
+                    <img [src]="userObj.profilePicUrl" alt="">
+                </div>
+
+                <div class="col-12">
+                    <button *ngIf="loggedUserId == 0" class="btn btn-primary" type="button" (click)="onSave()">Create User</button>
+                    <button *ngIf="loggedUserId != 0" class="btn btn-warning" type="button" (click)="onUpdate()">Update Profile</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
